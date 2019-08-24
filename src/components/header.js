@@ -8,6 +8,7 @@ const StyledHeader = styled.div`
   height: 5rem;
   padding: 0 2.3rem;
   box-sizing: border-box;
+  line-height: 5rem;
 `
 
 const Header = ({ siteTitle }) => (
