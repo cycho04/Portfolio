@@ -8,10 +8,17 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
-import project1 from '../../images/gatsby-astronaut.png';
+import project1 from '../../images/software.jpg';
+import project2 from '../../images/youtube.jpg';
+import project3 from '../../images/casino.jpg';
 import Code from '@material-ui/icons/Code';
 import Language from '@material-ui/icons/Language';
 import TrendingUp from '@material-ui/icons/TrendingUp';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faDice } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {device} from '../../styles/media';
+
 
 const StyledMain = styled.div`
     background: white;
@@ -39,18 +46,22 @@ const StyledGrid = styled(Grid)`
 
 const StyledGridItem = styled(Grid)`
     padding-top: 1rem;
+
+    @media ${device.mobile}{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 `
 
 const StyledCardMedia = styled(CardMedia)`
     height: auto;
     min-height: 150px;
-`
 
-const StyledButton = styled.a`
-    color: #a0a0a0;
-    cursor: pointer;
-`
+    @media ${device.mobile}{
+        min-height: 300px;
+    }
 
+`
 
 const Work = () => {
     return(
@@ -74,12 +85,8 @@ const Work = () => {
                                 image={project1}
                             />
                             <CardContent>
-                                blah blash sjdfnkf snfajk safd af af a f
+                                Website Template 
                             </CardContent>
-                            <CardActions>
-                                <StyledButton href='https://www.google.com'><Code /></StyledButton>
-                                <StyledButton href='https://www.google.com'><Language /></StyledButton>
-                            </CardActions>
                         </Card>
                     </StyledGridItem>
                     <StyledGridItem item xs={12}>
@@ -87,23 +94,19 @@ const Work = () => {
                             <CardHeader 
                                 avatar={
                                     <Avatar aria-label="recipe">
-                                      <TrendingUp />
+                                      <FontAwesomeIcon icon={faYoutube}/>
                                     </Avatar>
                                   }
-                                title='Lamar Software'
-                                subheader='SPA'
+                                title='Youtube Copy'
+                                subheader='Third Party API Integration'
                             />
                             <StyledCardMedia 
-                                title='Lamar Software Website'
-                                image={project1}
+                                title='YouTube'
+                                image={project2}
                             />
                             <CardContent>
-                                blah blash sjdfnkf snfajk safd af af a f
+                                Third Party API Integration
                             </CardContent>
-                            <CardActions>
-                                <StyledButton href='https://www.google.com'><Code /></StyledButton>
-                                <StyledButton href='https://www.google.com'><Language /></StyledButton>
-                            </CardActions>
                         </Card>
                     </StyledGridItem>
                     <StyledGridItem item xs={12}>
@@ -111,23 +114,19 @@ const Work = () => {
                             <CardHeader 
                                 avatar={
                                     <Avatar aria-label="recipe">
-                                      <TrendingUp />
+                                      <FontAwesomeIcon icon={faDice}/>
                                     </Avatar>
                                   }
-                                title='Lamar Software'
-                                subheader='SPA'
+                                title='Learn to play Baccarat'
+                                subheader='Full Stack Application'
                             />
                             <StyledCardMedia 
-                                title='Lamar Software Website'
-                                image={project1}
+                                title='Baccarat Game'
+                                image={project3}
                             />
                             <CardContent>
                                 blah blash sjdfnkf snfajk safd af af a f
                             </CardContent>
-                            <CardActions>
-                                <StyledButton href='https://www.google.com'><Code /></StyledButton>
-                                <StyledButton href='https://www.google.com'><Language /></StyledButton>
-                            </CardActions>
                         </Card>
                     </StyledGridItem>
                 </StyledGrid>  

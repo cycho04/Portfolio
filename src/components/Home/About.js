@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import {device} from '../../styles/media';
 
 const StyledMain = styled.div`
     background: white;
@@ -31,10 +32,15 @@ const StyledGrid = styled(Grid)`
 
 const StyledGridItem = styled(Grid)`
     padding-top: 1rem;
+
+    @media ${device.mobile}{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 `
 
 const StyledText = styled.p`
-
+    color: #646464;
 `
 
 
@@ -45,23 +51,17 @@ const About = () => {
                 <StyledGrid container>
                     <StyledGridItem xs={12}>
                         <StyledTitle>
-                            I'm a blank <StyledSpan>blank</StyledSpan>
+                            I'm an inventive  <StyledSpan>developer</StyledSpan>
                         </StyledTitle>
                     </StyledGridItem>
                     <StyledGridItem xs={12}>
                         <StyledText>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                            Aenean commodo ligula eget dolor. Aenean massa. 
-                            Cum sociis natoque penatibus et magnis dis parturient montes, 
-                            nascetur ridiculus mus.
+                            Based in Fremont, CA. 
                         </StyledText>
                     </StyledGridItem>
                     <StyledGridItem xs={12}>
                         <StyledText>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                            Aenean commodo ligula eget dolor. Aenean massa. 
-                            Cum sociis natoque penatibus et magnis dis parturient montes, 
-                            nascetur ridiculus mus.
+                            I use HTML, CSS, and JavaScript to build responsive applications.
                         </StyledText>
                     </StyledGridItem>
                 </StyledGrid>

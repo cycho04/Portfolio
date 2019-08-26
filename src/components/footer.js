@@ -7,8 +7,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const StyledFooter = styled.footer`
-  background-color:black;
-  color: rgba(255,255,255,0.6);
+  background-color: transparent;
+  color: rgba(255,255,255,0.7);
   height: auto;
   min-height: 200px;
   text-align: center;

@@ -21,6 +21,12 @@ const StyledTitle = styled.h2`
     margin: 0;
 `
 
+const StyledButton = styled.button`
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 25px;
+`
+
 //element is hidden, used for copy to clipboard
 const StyledInput = styled.input`
     opacity: 0;
@@ -40,7 +46,7 @@ const Contact = () => {
             <StyledContainer>
                 <StyledTitle>Get in Touch</StyledTitle>
                 <StyledInput type="text" value="chrisycho04@gmail.com" id='email'/>
-                <button onClick={copyToClipboard}>chrisycho04@gmail.com</button>
+                <StyledButton onClick={copyToClipboard}>chrisycho04@gmail.com</StyledButton>
             </StyledContainer>    
         </StyledMain>  
     )
