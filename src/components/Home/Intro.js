@@ -32,7 +32,7 @@ const StyledText = styled.p`
 const Intro = () => {
     return(
         <StyledContainer>
-            <StyledTitle>Portfolio Classic</StyledTitle>
+            <StyledTitle>Chris Cho</StyledTitle>
             <StyledText>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s

@@ -46,6 +46,7 @@ const Contact = () => {
             <StyledContainer>
                 <StyledTitle>Get in Touch</StyledTitle>
                 <StyledInput type="text" value="chrisycho04@gmail.com" id='email'/>
+                <br />
                 <StyledButton onClick={copyToClipboard}>chrisycho04@gmail.com</StyledButton>
             </StyledContainer>    
         </StyledMain>  

@@ -14,19 +14,32 @@ const StyledFooter = styled.footer`
   text-align: center;
 `
 
+const StyledTextBox = styled.div`
+  padding-top: 4rem;
+  line-height: 1.5rem;
+`
+
+const StyledIconBox = styled.div`
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  color: white;
+`
+
 const StyledP = styled.p`
   margin: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 `
 
 
 const Footer = ({ author }) => (
   <StyledFooter>
-    <StyledP>© 2019 {author}</StyledP>
-    <StyledP>Built with a mobile first approach</StyledP>
-    <FontAwesomeIcon icon={faGithub}/>
-    <FontAwesomeIcon icon={faLinkedin}/>
+    <StyledTextBox>
+      <StyledP>© 2019 {author}</StyledP>
+      <StyledP>Built with a mobile first approach</StyledP>
+    </StyledTextBox>
+    <StyledIconBox>
+      <FontAwesomeIcon icon={faGithub}/>
+      <FontAwesomeIcon icon={faLinkedin}/>
+    </StyledIconBox>
   </StyledFooter>
 )
 
