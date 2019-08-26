@@ -8,12 +8,20 @@ const StyledFooter = styled.footer`
   color: white;
   height: auto;
   min-height: 200px;
+  text-align: center;
+`
+
+const StyledP = styled.p`
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 `
 
 
 const Footer = ({ author }) => (
   <StyledFooter>
-      {author}
+    <StyledP>Built with a mobile first approach</StyledP>
+    <StyledP>{author}</StyledP>
   </StyledFooter>
 )
 
