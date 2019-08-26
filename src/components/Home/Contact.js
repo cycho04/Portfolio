@@ -8,13 +8,16 @@ const StyledMain = styled.div`
 
 const StyledContainer = styled(Container)`
     height: auto;
-    min-height: 400px;
+    min-height: 250px;
     background-color: white;
 `
 
 const StyledTitle = styled.h2`
-    font-size: 2rem;
-    padding-top: 1rem;
+    padding-top: 3rem !important;
+    text-align: center;
+    color: #a0a0a0;
+    font-size: 1.5rem;
+    font-weight: 400;
     margin: 0;
 `
 
@@ -23,7 +26,7 @@ const Contact = () => {
     return(
         <StyledMain>
             <StyledContainer>
-                <StyledTitle>Contact</StyledTitle>
+                <StyledTitle>Get in Touch</StyledTitle>
             </StyledContainer>    
         </StyledMain>  
     )
