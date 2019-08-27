@@ -92,10 +92,12 @@ const Work = () => {
                                 subheader='Gatsby.JS / GraphQL / Material UI'
                                 subheaderTypographyProps={{'color': 'white'}}
                             />
-                            <StyledCardMedia 
-                                title='Lamar Software Website'
-                                image={project1}
-                            />
+                            <a target='_blank' href='https://cocky-pare-e0db29.netlify.com/'>
+                                <StyledCardMedia 
+                                    title='Lamar Software Website'
+                                    image={project1}
+                                />    
+                            </a>
                             <CardContent>
                                 Progressive Web App (PWA) Template
                             </CardContent>
@@ -113,10 +115,13 @@ const Work = () => {
                                 subheader='React.JS / Axios.JS / REST API'
                                 subheaderTypographyProps={{'color': 'white'}}
                             />
-                            <StyledCardMedia 
-                                title='YouTube'
-                                image={project2}
-                            />
+                            <a target='_blank' href='https://my-youtube-mock.herokuapp.com/'>
+                                <StyledCardMedia 
+                                    title='YouTube'
+                                    image={project2}
+                                />     
+                            </a>
+                            
                             <CardContent>
                                 Third Party API Integration
                             </CardContent>
@@ -134,10 +139,12 @@ const Work = () => {
                                 subheader='React.JS / Node.JS / MongoDB'
                                 subheaderTypographyProps={{'color': 'white'}}
                             />
-                            <StyledCardMedia 
-                                title='Baccarat Game'
-                                image={project3}
-                            />
+                            <a target='_blank' href='https://young-garden-64652.herokuapp.com/'>
+                                <StyledCardMedia 
+                                    title='Baccarat Game'
+                                    image={project3}
+                                />
+                            </a>
                             <CardContent>
                                 Full Stack Application
                             </CardContent>

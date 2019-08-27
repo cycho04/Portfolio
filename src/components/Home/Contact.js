@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '@material-ui/core/Container';
+import Snackbar from '@material-ui/core/Snackbar';
+
 
 const StyledMain = styled.div`
     background: white;
@@ -28,6 +30,10 @@ const StyledButton = styled.button`
     background-image: linear-gradient(#2C3E50, #4CA1AF);
     color: white;
     font-weight: 600;
+    cursor: pointer;
+    :focus{
+        outline: none;
+    }
 `
 
 //element is hidden, used for copy to clipboard
@@ -35,25 +41,53 @@ const StyledInput = styled.input`
     opacity: 0;
 `
 
-const copyToClipboard = () => {
-    let copyEmail = document.getElementById('email');
-    copyEmail.select();
-    copyEmail.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-}
 
+class Contact extends React.Component {
 
-const Contact = () => {
-    return(
-        <StyledMain>
-            <StyledContainer>
-                <StyledTitle>Get in Touch</StyledTitle>
-                <StyledInput type="text" value="chrisycho04@gmail.com" id='email'/>
-                <br />
-                <StyledButton onClick={copyToClipboard}>chrisycho04@gmail.com</StyledButton>
-            </StyledContainer>    
-        </StyledMain>  
-    )
+    state={open: false}
+
+    copyToClipboard = () => {
+        let copyEmail = document.getElementById('email');
+        copyEmail.select();
+        copyEmail.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    handleClick = () => {
+        this.copyToClipboard();
+        this.setState({
+            open: true
+        })
+        setTimeout(() => {
+            this.setState({
+                open: false
+            })
+        }, 4000)
+    }
+
+    render(){
+        return(
+            <StyledMain>
+                <StyledContainer>
+                    <StyledTitle>Get in Touch</StyledTitle>
+                    <StyledInput type="text" value="chrisycho04@gmail.com" id='email'/>
+                    <br />
+                    <StyledButton onClick={this.handleClick}>chrisycho04@gmail.com</StyledButton>
+                    <Snackbar
+                        anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left',
+                        }}
+                        open={this.state.open}
+                        ContentProps={{
+                        'aria-describedby': 'message-id',
+                        }}
+                        message={<span>Copied to Clipboard</span>}
+                    />
+                </StyledContainer>    
+            </StyledMain>  
+        )
+    }
 }
 
 export default Contact;

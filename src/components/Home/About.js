@@ -35,11 +35,8 @@ const StyledGrid = styled(Grid)`
 
 const StyledGridItem = styled(Grid)`
     padding-top: 1rem;
-
-    @media ${device.mobile}{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    padding-left: 2rem;
+    padding-right: 2rem;
 `
 
 const StyledText = styled.p`
@@ -70,7 +67,9 @@ const About = () => {
                     </StyledGridItem>
                     <StyledGridItem item xs={12} md={4}>
                         <StyledText>
-                            I use HTML, CSS, and JavaScript to build responsive applications.
+                            I use HTML, CSS, JavaScript, and Node.JS to build responsive applications. 
+                            I've utilized Redux, REST APIS, and CSS frameworks to help me achieve these goals. 
+                            Currently, I am exploring Python and its many uses such as, backend development and task automation.
                         </StyledText>
                     </StyledGridItem>
                 </StyledGrid>

@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components';
@@ -29,6 +28,10 @@ const StyledP = styled.p`
   margin: 0;
 `
 
+const StyledLink = styled.a`
+  color: white;
+`
+
 
 const Footer = ({ author }) => (
   <StyledFooter>
@@ -37,10 +40,10 @@ const Footer = ({ author }) => (
       <StyledP>Built with a mobile first approach</StyledP>
     </StyledTextBox>
     <StyledIconBox>
-      <FontAwesomeIcon icon={faGithub}/>
+      <StyledLink target='_blank' href='https://github.com/cycho04'><FontAwesomeIcon icon={faGithub}/></StyledLink>
       &nbsp;
       &nbsp;
-      <FontAwesomeIcon icon={faLinkedin}/>
+      <StyledLink target='_blank' href='https://www.linkedin.com/in/chrisycho/'><FontAwesomeIcon icon={faLinkedin}/></StyledLink>
     </StyledIconBox>
   </StyledFooter>
 )

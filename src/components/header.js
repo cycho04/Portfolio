@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
     <StyledHeader>
       <StyledTitle>
         {siteTitle}
-        <StyledIcon />
+        {/* <StyledIcon /> */}
       </StyledTitle> 
     </StyledHeader>  
   </header>
