@@ -14,14 +14,23 @@ const StyledContainer = styled(Container)`
 
     @media ${device.mobile}{
         min-height: 350px;
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    @media ${device.tablet}{
+        padding-left: 14rem;
+        padding-right: 14rem;
+    }
+    @media ${device.laptop}{
+        padding-left: 17rem;
+        padding-right: 17rem;
     }
 `
 
 const StyledTitle = styled.h2`
     font-size: 2.5rem;
     font-weight: 400;
+    margin-bottom: 1rem;
 `
 
 const StyledText = styled.p`
@@ -34,8 +43,8 @@ const Intro = () => {
         <StyledContainer>
             <StyledTitle>Chris Cho</StyledTitle>
             <StyledText>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                As a Front End Developer, I know how important it is to make websites look good and work even better.
+                I focus on writing readable and clean code that is easy to customize and maintain.
             </StyledText>
         </StyledContainer>
     )

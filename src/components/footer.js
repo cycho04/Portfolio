@@ -8,7 +8,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const StyledFooter = styled.footer`
   background-color: transparent;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.8);
   height: auto;
   min-height: 200px;
   text-align: center;
@@ -38,6 +38,8 @@ const Footer = ({ author }) => (
     </StyledTextBox>
     <StyledIconBox>
       <FontAwesomeIcon icon={faGithub}/>
+      &nbsp;
+      &nbsp;
       <FontAwesomeIcon icon={faLinkedin}/>
     </StyledIconBox>
   </StyledFooter>

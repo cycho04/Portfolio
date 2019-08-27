@@ -26,14 +26,14 @@ const StyledMain = styled.div`
 
 const StyledContainer = styled(Container)`
     height: auto;
-    min-height: 400px;
+    min-height: 300px;
 `
 
 const StyledTitle = styled.h2`
-    padding-top: 4rem !important;
+    padding-top: 3rem !important;
     text-align: center;
     color: #a0a0a0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -46,11 +46,17 @@ const StyledGrid = styled(Grid)`
 
 const StyledGridItem = styled(Grid)`
     padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     @media ${device.mobile}{
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
+`
+
+const StyledAvatar = styled(Avatar)`
+    background-image: linear-gradient(#005AA7, #FFFDE4);
 `
 
 const StyledCardMedia = styled(CardMedia)`
@@ -58,9 +64,14 @@ const StyledCardMedia = styled(CardMedia)`
     min-height: 150px;
 
     @media ${device.mobile}{
-        min-height: 300px;
+        min-height: 200px;
     }
 
+`
+
+const StyledCard = styled(Card)`
+    background-image: linear-gradient(#2C3E50, #4CA1AF);
+    color: white;
 `
 
 const Work = () => {
@@ -69,36 +80,38 @@ const Work = () => {
             <StyledContainer>
                 <StyledTitle>MY WORK</StyledTitle> 
                 <StyledGrid container>
-                    <StyledGridItem item xs={12}>
-                        <Card>
+                    <StyledGridItem item xs={12} sm={6} md={4}>
+                        <StyledCard>
                             <CardHeader 
                                 avatar={
-                                    <Avatar aria-label="recipe">
+                                    <StyledAvatar aria-label="recipe">
                                       <TrendingUp />
-                                    </Avatar>
+                                    </StyledAvatar>
                                   }
                                 title='Lamar Software'
-                                subheader='SPA'
+                                subheader='Gatsby.JS / GraphQL / Material UI'
+                                subheaderTypographyProps={{'color': 'white'}}
                             />
                             <StyledCardMedia 
                                 title='Lamar Software Website'
                                 image={project1}
                             />
                             <CardContent>
-                                Website Template 
+                                Progressive Web App (PWA) Template
                             </CardContent>
-                        </Card>
+                        </StyledCard>
                     </StyledGridItem>
-                    <StyledGridItem item xs={12}>
-                        <Card>
+                    <StyledGridItem item xs={12} sm={6} md={4}>
+                        <StyledCard>
                             <CardHeader 
                                 avatar={
-                                    <Avatar aria-label="recipe">
+                                    <StyledAvatar aria-label="recipe">
                                       <FontAwesomeIcon icon={faYoutube}/>
-                                    </Avatar>
+                                    </StyledAvatar>
                                   }
                                 title='Youtube Copy'
-                                subheader='Third Party API Integration'
+                                subheader='React.JS / Axios.JS / REST API'
+                                subheaderTypographyProps={{'color': 'white'}}
                             />
                             <StyledCardMedia 
                                 title='YouTube'
@@ -107,27 +120,28 @@ const Work = () => {
                             <CardContent>
                                 Third Party API Integration
                             </CardContent>
-                        </Card>
+                        </StyledCard>
                     </StyledGridItem>
-                    <StyledGridItem item xs={12}>
-                        <Card>
+                    <StyledGridItem item xs={12} sm md={4}>
+                        <StyledCard>
                             <CardHeader 
                                 avatar={
-                                    <Avatar aria-label="recipe">
+                                    <StyledAvatar aria-label="recipe">
                                       <FontAwesomeIcon icon={faDice}/>
-                                    </Avatar>
+                                    </StyledAvatar>
                                   }
                                 title='Learn to play Baccarat'
-                                subheader='Full Stack Application'
+                                subheader='React.JS / Node.JS / MongoDB'
+                                subheaderTypographyProps={{'color': 'white'}}
                             />
                             <StyledCardMedia 
                                 title='Baccarat Game'
                                 image={project3}
                             />
                             <CardContent>
-                                blah blash sjdfnkf snfajk safd af af a f
+                                Full Stack Application
                             </CardContent>
-                        </Card>
+                        </StyledCard>
                     </StyledGridItem>
                 </StyledGrid>  
             </StyledContainer>    

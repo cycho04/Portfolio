@@ -8,7 +8,7 @@ const StyledMain = styled.div`
 
 const StyledContainer = styled(Container)`
     height: auto;
-    min-height: 250px;
+    min-height: 210px;
     background-color: white;
     text-align: center;
 `
@@ -16,15 +16,18 @@ const StyledContainer = styled(Container)`
 const StyledTitle = styled.h2`
     padding-top: 3rem !important;
     color: #a0a0a0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     margin: 0;
 `
 
 const StyledButton = styled.button`
     padding: 1rem;
-    border: 1px solid black;
+    border: none;
     border-radius: 25px;
+    background-image: linear-gradient(#2C3E50, #4CA1AF);
+    color: white;
+    font-weight: 600;
 `
 
 //element is hidden, used for copy to clipboard
