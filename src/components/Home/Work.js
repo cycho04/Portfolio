@@ -70,8 +70,7 @@ const StyledCardMedia = styled(CardMedia)`
 `
 
 const StyledCard = styled(Card)`
-    background-image: linear-gradient(#2C3E50, #4CA1AF);
-    color: white;
+    
 `
 
 const Work = () => {

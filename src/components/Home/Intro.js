@@ -6,7 +6,7 @@ import {device} from '../../styles/media';
 const StyledContainer = styled(Container)`
     color: rgba(255,255,255, 0.9);
     text-align: center;
-    height: auto;
+    height: 100vh;
     min-height: 450px;
     padding-left: 3rem;
     padding-right: 3rem;
