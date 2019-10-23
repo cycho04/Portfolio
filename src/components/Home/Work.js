@@ -19,6 +19,37 @@ import { faDice } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {device} from '../../styles/media';
 
+// import {StaticQuery, graphql} from 'gatsby';
+// import Img from 'gatsby-image';
+// import BackgroundImage from 'gatsby-background-image';
+
+
+
+// const Work = () => {
+//     return(
+//         <StaticQuery 
+//             query={  
+//                 graphql`{
+//                     casino:file(relativePath:{eq:"casino.jpg"}) {    childImageSharp {      fluid(maxWidth: 1600) {        ...GatsbyImageSharpFluid      }    }  }
+//                 }`}   
+//             render={(data) => 
+//                 (    <>      
+//                         <Img   fluid={data.casino.childImageSharp.fluid}  alt=""/>   
+//                     </>  
+//             )}/>
+
+//     )
+// }
+
+
+
+
+
+
+
+
+
+
 
 const StyledMain = styled.div`
     background: white;
@@ -56,7 +87,7 @@ const StyledGridItem = styled(Grid)`
 `
 
 const StyledAvatar = styled(Avatar)`
-    background-image: linear-gradient(#005AA7, #FFFDE4);
+    background-image: linear-gradient(black, #FFFDE4);
 `
 
 const StyledCardMedia = styled(CardMedia)`

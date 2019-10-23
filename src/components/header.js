@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => (
   <header>
     <StyledHeader>
       <StyledTitle>
-        {siteTitle}
+        CYC
         {/* <StyledIcon /> */}
       </StyledTitle> 
     </StyledHeader>  
