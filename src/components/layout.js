@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image';
 import styled from 'styled-components';
+import {device} from '../styles/media';
 
 import Header from "./header"
 import Footer from './footer'
@@ -14,6 +15,8 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   overscroll-behavior: none;
   background-position: center center;
   background-repeat: no-repeat;
+  width: auto;
+  position: absolute;
 `
 
 const Layout = ({ children }) => {
