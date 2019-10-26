@@ -15,10 +15,8 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   overscroll-behavior: none;
   background-position: center center;
   background-repeat: no-repeat;
-  width: auto;
-  position: fixed;
-  left: 50%;
-  margin-left: -512px;
+  width: 100vw;
+  height: 100vh;
 `
 
 const Layout = ({ children }) => {
