@@ -16,7 +16,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   background-position: center center;
   background-repeat: no-repeat;
   width: auto;
-  position: absolute;
+  position: fixed;
   left: 50%;
   margin-left: -512px;
 `
