@@ -17,6 +17,8 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   background-repeat: no-repeat;
   width: auto;
   position: absolute;
+  left: 50%;
+  margin-left: -512px;
 `
 
 const Layout = ({ children }) => {
