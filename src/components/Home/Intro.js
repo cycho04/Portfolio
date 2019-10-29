@@ -5,6 +5,7 @@ import {device} from '../../styles/media';
 
 const StyledContainer = styled(Container)`
     color: rgba(255,255,255, 0.9);
+    background-color: #262626;
     text-align: center;
     height: 100vh;
     min-height: 450px;
@@ -43,7 +44,6 @@ const Intro = () => {
         <StyledContainer>
             <StyledTitle>Chris Cho</StyledTitle>
             <StyledText>
-                As a Front End Developer, I know how important it is to make websites look good and work even better.
                 I focus on writing readable and clean code that is easy to customize and maintain.
             </StyledText>
         </StyledContainer>

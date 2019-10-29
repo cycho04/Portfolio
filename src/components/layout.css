@@ -9,8 +9,5 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('../images/background2.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  overscroll-behavior: none;
+  background-color: #212121;
 }
