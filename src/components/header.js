@@ -34,8 +34,13 @@ const Header = ({ siteTitle }) => (
   <header>
     <StyledHeader>
       <StyledTitle>
+<<<<<<< HEAD
         {siteTitle}
         <FontAwesomeIcon icon={faBars}/>
+=======
+        CYC
+        {/* <StyledIcon /> */}
+>>>>>>> f8696843516c39a4442af59a8c54336d6698151b
       </StyledTitle> 
     </StyledHeader>  
     <ExpansionPanel>

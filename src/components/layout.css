@@ -9,5 +9,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
   background-color: #212121;
+=======
+  background-size: cover;
+  background-attachment: fixed;
+  overscroll-behavior: none;
+>>>>>>> f8696843516c39a4442af59a8c54336d6698151b
 }
