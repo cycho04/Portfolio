@@ -21,34 +21,11 @@ const StyledBackgroundImage = styled(BackgroundImage)`
 
 const Layout = ({ children }) => {
   return(
-    <StaticQuery
-      query={  
-        graphql`{
-          background:file(relativePath:{eq:"background2.jpg"}) {    
-            childImageSharp {      
-              fluid(maxWidth: 1600) {        
-                ...GatsbyImageSharpFluid      
-              }    
-            }  
-          }
-        }`
-      }  
-      render={data => {
-        // Set ImageData.
-        const imageData = data.background.childImageSharp.fluid
-        return (
-          <StyledBackgroundImage
-            Tag="section"
-            fluid={imageData}
-            backgroundColor={`#040e18`}
-          >
+    <>
             <Header />
               <main>{children}</main>
             <Footer /> 
-          </StyledBackgroundImage>
-        )
-      }}
-    />
+            </>
   )
 }
 

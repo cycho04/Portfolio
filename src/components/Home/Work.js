@@ -103,74 +103,36 @@ const StyledCard = styled(Card)`
 const Work = () => {
 
     const projects = [
+        {title: 'LaMar Software', url: 'https://cocky-pare-e0db29.netlify.com/', image: project1, subheader: 'Gatsby.JS / GraphQL / Material UI'},
+        {title: 'YouTube Copy', url: 'https://my-youtube-mock.herokuapp.com/', image: project2, subheader: 'React.JS / Axios.JS / REST API'},
+        {title: 'Learn to Play Baccarat', url: 'https://young-garden-64652.herokuapp.com/', image: project3, subheader: 'React.JS / Node.JS / MongoDB'},
     ]
+
+    const renderedProjects = projects.map((project)=> {
+        return(
+            <StyledGridItem item xs={12} sm={6} md={4}>
+                <StyledCard>
+                    <a target='_blank' href={project.url}>
+                        <StyledCardMedia 
+                            title={project.title}
+                            image={project.image}
+                        />    
+                    </a>
+                    <CardHeader 
+                        title={project.title}
+                        subheader={project.subheader}
+                        subheaderTypographyProps={{'color': 'white'}}
+                    />
+                </StyledCard>
+            </StyledGridItem>
+        )
+    })
     return(
         <StyledMain>
             <StyledContainer>
                 <StyledTitle>MY WORK</StyledTitle> 
                 <StyledGrid container>
-                    <StyledGridItem item xs={12} sm={6} md={4}>
-                        <StyledCard>
-                            <a target='_blank' href='https://cocky-pare-e0db29.netlify.com/'>
-                                <StyledCardMedia 
-                                    title='Lamar Software Website'
-                                    image={project1}
-                                />    
-                            </a>
-                            <CardHeader 
-                                title='Lamar Software'
-                                subheader='Gatsby.JS / GraphQL / Material UI'
-                                subheaderTypographyProps={{'color': 'white'}}
-                            />
-                        </StyledCard>
-                    </StyledGridItem>
-                    <StyledGridItem item xs={12} sm={6} md={4}>
-                        <StyledCard>
-                            <CardHeader 
-                                avatar={
-                                    <StyledAvatar aria-label="recipe">
-                                      <FontAwesomeIcon icon={faYoutube}/>
-                                    </StyledAvatar>
-                                  }
-                                title='Youtube Copy'
-                                subheader='React.JS / Axios.JS / REST API'
-                                subheaderTypographyProps={{'color': 'white'}}
-                            />
-                            <a target='_blank' href='https://my-youtube-mock.herokuapp.com/'>
-                                <StyledCardMedia 
-                                    title='YouTube'
-                                    image={project2}
-                                />     
-                            </a>
-                            
-                            <CardContent>
-                                Third Party API Integration
-                            </CardContent>
-                        </StyledCard>
-                    </StyledGridItem>
-                    <StyledGridItem item xs={12} sm md={4}>
-                        <StyledCard>
-                            <CardHeader 
-                                avatar={
-                                    <StyledAvatar aria-label="recipe">
-                                      <FontAwesomeIcon icon={faDice}/>
-                                    </StyledAvatar>
-                                  }
-                                title='Learn to play Baccarat'
-                                subheader='React.JS / Node.JS / MongoDB'
-                                subheaderTypographyProps={{'color': 'white'}}
-                            />
-                            <a target='_blank' href='https://young-garden-64652.herokuapp.com/'>
-                                <StyledCardMedia 
-                                    title='Baccarat Game'
-                                    image={project3}
-                                />
-                            </a>
-                            <CardContent>
-                                Full Stack Application
-                            </CardContent>
-                        </StyledCard>
-                    </StyledGridItem>
+                    {renderedProjects}
                 </StyledGrid>  
             </StyledContainer>    
         </StyledMain>
