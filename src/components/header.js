@@ -1,15 +1,17 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled, {css} from 'styled-components';
-import Dehaze from "@material-ui/icons/Dehaze";
+import Container from '@material-ui/core/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 
-const StyledHeader = styled.div`
+const StyledHeader = styled(Container)`
   color: rgba(255,255,255,0.9);
+  background-color: #262626;
   width: 100%;
   height: 5rem;
   padding: 0 2.3rem;
+  margin-bottom: 2rem;
   box-sizing: border-box;
   line-height: 5rem;
 `
