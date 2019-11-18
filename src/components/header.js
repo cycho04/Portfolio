@@ -20,10 +20,8 @@ const StyledTitle = styled.h5`
   font-weight: 600;
 `
 
-const StyledIcon = styled(Dehaze)`
-  margin: 0;
-  float: right;
-  padding-top: 1.6rem;
+const StyledIcon = styled(FontAwesomeIcon)`
+  height: 1rem;
 `
 
 const Header = ({ siteTitle }) => (
@@ -31,7 +29,7 @@ const Header = ({ siteTitle }) => (
     <StyledHeader>
       <StyledTitle>
         {siteTitle}
-        <FontAwesomeIcon icon={faBars}/>
+        <StyledIcon icon={faBars}/>
       </StyledTitle> 
     </StyledHeader>  
   </header>

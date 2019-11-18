@@ -127,6 +127,8 @@ const Work = () => {
             </StyledGridItem>
         )
     })
+
+    
     return(
         <StyledMain>
             <StyledContainer>
