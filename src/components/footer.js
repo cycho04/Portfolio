@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import colors from '../styles/colors';
 
 const StyledFooter = styled.footer`
   background-color: transparent;
-  color: rgba(255,255,255,0.8);
+  color: ${colors.secondaryText};
   height: auto;
   min-height: 200px;
   text-align: center;
@@ -21,7 +22,7 @@ const StyledTextBox = styled.div`
 const StyledIconBox = styled.div`
   padding-top: 1rem;
   font-size: 1.5rem;
-  color: white;
+  color: ${colors.secondaryText};
 `
 
 const StyledP = styled.p`
@@ -29,7 +30,7 @@ const StyledP = styled.p`
 `
 
 const StyledLink = styled.a`
-  color: white;
+  color: ${colors.secondaryText};
 `
 
 

@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Container from '@material-ui/core/Container';
 import {device} from '../../styles/media';
+import colors from '../../styles/colors';
 
 const StyledContainer = styled(Container)`
-    color: rgba(255,255,255, 0.9);
+    color: ${colors.secondaryText};
     background-color: #262626;
     text-align: center;
     height: auto;

@@ -5,56 +5,25 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
 import project1 from '../../images/software.jpg';
 import project2 from '../../images/youtube.jpg';
 import project3 from '../../images/casino.jpg';
-import TrendingUp from '@material-ui/icons/TrendingUp';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faDice } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {device} from '../../styles/media';
-
-// import {StaticQuery, graphql} from 'gatsby';
-// import Img from 'gatsby-image';
-// import BackgroundImage from 'gatsby-background-image';
+import colors from '../../styles/colors';
 
 
-
-// const Work = () => {
-//     return(
-//         <StaticQuery 
-//             query={  
-//                 graphql`{
-//                     casino:file(relativePath:{eq:"casino.jpg"}) {    childImageSharp {      fluid(maxWidth: 1600) {        ...GatsbyImageSharpFluid      }    }  }
-//                 }`}   
-//             render={(data) => 
-//                 (    <>      
-//                         <Img   fluid={data.casino.childImageSharp.fluid}  alt=""/>   
-//                     </>  
-//             )}/>
-
-//     )
-// }
-
-
-
-
-
-
-
-
-
-
-
-const StyledMain = styled.div`
-
+const StyledMain = styled(Container)`
+    background-color: #262626;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0;
 `
 
 const StyledContainer = styled(Container)`
     height: auto;
     min-height: 300px;
+    padding-bottom: 1rem;
 `
 
 const StyledTitle = styled.h2`
@@ -65,6 +34,7 @@ const StyledTitle = styled.h2`
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0;
+    color: ${colors.secondaryText};
 `
 
 const StyledGrid = styled(Grid)`
@@ -81,10 +51,6 @@ const StyledGridItem = styled(Grid)`
     }
 `
 
-const StyledAvatar = styled(Avatar)`
-    background-image: linear-gradient(black, #FFFDE4);
-`
-
 const StyledCardMedia = styled(CardMedia)`
     height: auto;
     min-height: 150px;
@@ -97,7 +63,7 @@ const StyledCardMedia = styled(CardMedia)`
 
 const StyledCard = styled(Card)`
     background-color: #262626;
-    color: white;
+    color: ${colors.secondaryText};
 `
 
 const Work = () => {
@@ -130,7 +96,7 @@ const Work = () => {
 
     
     return(
-        <StyledMain>
+        <StyledMain id='work'>
             <StyledContainer>
                 <StyledTitle>MY WORK</StyledTitle> 
                 <StyledGrid container>

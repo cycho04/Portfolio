@@ -3,15 +3,15 @@ import styled from 'styled-components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import {device} from '../../styles/media';
+import colors from '../../styles/colors';
 
 const StyledMain = styled.div`
-    background: white;
+    background-image: linear-gradient(#212121, ${colors.thirdBG}, ${colors.secondaryBG});
 `
 
 const StyledContainer = styled(Container)`
     height: auto;
     min-height: 200px;
-    background-color: white;
     @media ${device.mobile}{
         padding-top: 3rem;
     }
@@ -22,6 +22,7 @@ const StyledTitle = styled.h2`
     padding-top: 1rem;
     margin: 0;
     font-weight: 300;
+    color: ${colors.secondaryText};
 `
 
 const StyledSpan = styled.span`
@@ -40,14 +41,14 @@ const StyledGridItem = styled(Grid)`
 `
 
 const StyledText = styled.p`
-    color: #646464;
+    color: ${colors.secondaryText};
     line-height: 1.3rem;
 `
 
 
 const About = () => {
     return(
-        <StyledMain>
+        <StyledMain id='aboutme'>
             <StyledContainer>
                 <StyledGrid container>
                     <StyledGridItem item xs={12} md={4}>
