@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Container from '@material-ui/core/Container';
 import {device} from '../../styles/media';
 import colors from '../../styles/colors';
+import Grid from '@material-ui/core/Grid';
+import mic from '../../images/goldenmic.png';
 
 const StyledContainer = styled(Container)`
     color: ${colors.secondaryText};
@@ -33,23 +35,43 @@ const StyledTitle = styled.h2`
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
-    background: -webkit-linear-gradient(#eee, #333);
+    background: -webkit-linear-gradient(right, ${colors.thirdBG}, ${colors.secondaryBG}, ${colors.primaryBG});
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: bold;
 `
 
 const StyledText = styled.p`
     line-height: 1.8rem;
 `
 
+const StyledGrid = styled(Grid)`
+
+`
+
+const StyledGridItem = styled(Grid)`
+
+`
+const StyledImg = styled.img`
+    height: auto;
+    max-height: 500px;
+`
+
 
 const Intro = () => {
     return(
         <StyledContainer>
-            <StyledTitle>Chris Cho</StyledTitle>
-            <StyledText>
-                I focus on writing readable and clean code that is easy to customize and maintain.
-            </StyledText>
+            <StyledGrid container>
+                <StyledGridItem item xs={12} md={6}>
+                    <StyledTitle>hello, i'm Chris.</StyledTitle>
+                    <StyledText>
+                        I'm a software developer and I focus on writing readable and clean code that is easy to customize and maintain.
+                    </StyledText>
+                </StyledGridItem>
+                <StyledGridItem item xs={12} md={6}>
+                    <StyledImg src={mic}/>
+                </StyledGridItem>
+            </StyledGrid>
         </StyledContainer>
     )
 }

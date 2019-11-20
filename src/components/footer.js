@@ -5,9 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import colors from '../styles/colors';
+import Container from '@material-ui/core/Container';
 
-const StyledFooter = styled.footer`
-  background-color: transparent;
+const StyledFooter = styled(Container)`
+  margin-top: 2rem;
+  background-color: #262626;
   color: ${colors.secondaryText};
   height: auto;
   min-height: 200px;
@@ -35,18 +37,20 @@ const StyledLink = styled.a`
 
 
 const Footer = ({ author }) => (
-  <StyledFooter>
-    <StyledTextBox>
-      <StyledP>© 2019 {author}</StyledP>
-      <StyledP>Built with a mobile first approach</StyledP>
-    </StyledTextBox>
-    <StyledIconBox>
-      <StyledLink target='_blank' href='https://github.com/cycho04'><FontAwesomeIcon icon={faGithub}/></StyledLink>
-      &nbsp;
-      &nbsp;
-      <StyledLink target='_blank' href='https://www.linkedin.com/in/chrisycho/'><FontAwesomeIcon icon={faLinkedin}/></StyledLink>
-    </StyledIconBox>
-  </StyledFooter>
+  <footer>
+    <StyledFooter>
+      <StyledTextBox>
+        <StyledP>© 2019 {author}</StyledP>
+        <StyledP>Built with a mobile first approach</StyledP>
+      </StyledTextBox>
+      <StyledIconBox>
+        <StyledLink target='_blank' href='https://github.com/cycho04'><FontAwesomeIcon icon={faGithub}/></StyledLink>
+        &nbsp;
+        &nbsp;
+        <StyledLink target='_blank' href='https://www.linkedin.com/in/chrisycho/'><FontAwesomeIcon icon={faLinkedin}/></StyledLink>
+      </StyledIconBox>
+    </StyledFooter>
+  </footer>
 )
 
 Footer.propTypes = {

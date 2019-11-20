@@ -8,7 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import project1 from '../../images/software.jpg';
 import project2 from '../../images/youtube.jpg';
 import project3 from '../../images/casino.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {device} from '../../styles/media';
 import colors from '../../styles/colors';
 
@@ -34,7 +33,10 @@ const StyledTitle = styled.h2`
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0;
-    color: ${colors.secondaryText};
+    background: -webkit-linear-gradient(right, ${colors.thirdBG}, ${colors.secondaryBG}, ${colors.primaryBG});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 `
 
 const StyledGrid = styled(Grid)`
@@ -74,11 +76,11 @@ const Work = () => {
         {title: 'Learn to Play Baccarat', url: 'https://young-garden-64652.herokuapp.com/', image: project3, subheader: 'React.JS / Node.JS / MongoDB'},
     ]
 
-    const renderedProjects = projects.map((project)=> {
+    const renderedProjects = projects.map((project, index)=> {
         return(
-            <StyledGridItem item xs={12} sm={6} md={4}>
+            <StyledGridItem key={index} item xs={12} sm={6} md={4}>
                 <StyledCard>
-                    <a target='_blank' href={project.url}>
+                    <a target='_blank' rel="noopener noreferrer" href={project.url}>
                         <StyledCardMedia 
                             title={project.title}
                             image={project.image}
@@ -87,7 +89,7 @@ const Work = () => {
                     <CardHeader 
                         title={project.title}
                         subheader={project.subheader}
-                        subheaderTypographyProps={{'color': 'white'}}
+                        subheaderTypographyProps={{'color': "initial"}}
                     />
                 </StyledCard>
             </StyledGridItem>

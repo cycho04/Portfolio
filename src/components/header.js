@@ -3,9 +3,10 @@ import React from "react"
 import styled, {css} from 'styled-components';
 import Container from '@material-ui/core/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {faBolt} from '@fortawesome/free-solid-svg-icons';
 import Drawer from '@material-ui/core/Drawer';
 import colors from '../styles/colors';
+import {device} from '../styles/media';
 
 
 const StyledHeader = styled(Container)`
@@ -26,7 +27,10 @@ const StyledTitle = styled.h5`
 `
 
 const StyledIcon = styled(FontAwesomeIcon)`
-  height: 1rem;
+  height: 1.5rem;
+  @media ${device.tablet}{
+    display: none;
+  }
 `
 
 const StyledHidden = styled.div`
@@ -36,12 +40,21 @@ const StyledHidden = styled.div`
 const StyledLinks = styled.a`
   color: ${colors.secondaryText};
   text-decoration: none;
-  display: block;
   padding-left: 8%;
-  line-height: 2.3rem;
+  display: none;
+
+  ${props => props.hidden && css`
+    display: block;
+    line-height: 2.3rem;
+  `}
+
+  @media ${device.tablet}{
+    display: initial;
+    font-size: 1.1rem;
+  }
 `
 
-const Header = ({siteTitle}) => {
+const Header = () => {
   const [state, setState] = React.useState({
     top: false
   });
@@ -58,17 +71,25 @@ const Header = ({siteTitle}) => {
     <header>
       <StyledHeader>
         <StyledTitle>
-          {siteTitle}
-          <StyledIcon onClick={toggleDrawer('top', true)} icon={faBars}/>
-          <Drawer anchor='top' open={state.top} onClick={toggleDrawer('top', false)}>
-            <StyledHidden>
-              <StyledLinks href='#work' onClick={toggleDrawer('top', false)}>
+          <StyledLinks href='#work' onClick={toggleDrawer('top', false)}>
                 Work
               </StyledLinks>
               <StyledLinks href='#aboutme'>
                 About Me
               </StyledLinks>
               <StyledLinks href='#contact'>
+                Contact
+              </StyledLinks>
+          <StyledIcon onClick={toggleDrawer('top', true)} icon={faBolt}/>
+          <Drawer anchor='top' open={state.top} onClick={toggleDrawer('top', false)}>
+            <StyledHidden>
+              <StyledLinks hidden href='#work' onClick={toggleDrawer('top', false)}>
+                Work
+              </StyledLinks>
+              <StyledLinks hidden href='#aboutme'>
+                About Me
+              </StyledLinks>
+              <StyledLinks hidden href='#contact'>
                 Contact
               </StyledLinks>
             </StyledHidden>

@@ -6,21 +6,25 @@ import colors from '../../styles/colors';
 
 
 const StyledMain = styled.div`
-    background-color: ${colors.secondaryBG};
+    
 `
 
 const StyledContainer = styled(Container)`
     height: auto;
     min-height: 210px;
     text-align: center;
+    background-color: #262626;
 `
 
 const StyledTitle = styled.h2`
     padding-top: 3rem !important;
-    color: ${colors.secondaryText};
     font-size: 2rem;
     font-weight: 400;
     margin: 0;
+    background: -webkit-linear-gradient(right, ${colors.thirdBG}, ${colors.secondaryBG}, ${colors.primaryBG});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 `
 
 const StyledButton = styled.button`
@@ -65,12 +69,13 @@ class Contact extends React.Component {
         }, 4000)
     }
 
+    //A default onChange is needed on StyledInput
     render(){
         return(
             <StyledMain id='contact'>
                 <StyledContainer>
                     <StyledTitle>Get in Touch</StyledTitle>
-                    <StyledInput type="text" value="chrisycho04@gmail.com" id='email'/>
+                    <StyledInput onChange={() => true} type="text" value="chrisycho04@gmail.com" id='email'/>
                     <br />
                     <StyledButton onClick={this.handleClick}>chrisycho04@gmail.com</StyledButton>
                     <Snackbar
