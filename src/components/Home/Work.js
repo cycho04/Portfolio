@@ -72,8 +72,8 @@ const Work = () => {
 
     const projects = [
         {title: 'LaMar Software', url: 'https://cocky-pare-e0db29.netlify.com/', image: project1, subheader: 'Gatsby.JS / GraphQL / Material UI'},
-        {title: 'YouTube Copy', url: 'https://my-youtube-mock.herokuapp.com/', image: project2, subheader: 'React.JS / Axios.JS / REST API'},
-        {title: 'Learn to Play Baccarat', url: 'https://young-garden-64652.herokuapp.com/', image: project3, subheader: 'React.JS / Node.JS / MongoDB'},
+        {title: 'YouTube Copy', url: 'https://hue-tube.herokuapp.com/', image: project2, subheader: 'React.JS / Axios.JS / REST API'},
+        {title: 'Learn to Play Baccarat', url: 'https://ez-baccarat.herokuapp.com/', image: project3, subheader: 'React.JS / Node.JS / MongoDB'},
     ]
 
     const renderedProjects = projects.map((project, index)=> {
