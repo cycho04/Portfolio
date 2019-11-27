@@ -65,7 +65,7 @@ const About = () => {
                 <StyledGrid container>
                     <StyledGridItem item xs={12} md={4}>
                         <StyledTitle>
-                            I'm an inventive  
+                            I'm a self taught 
                             <br />
                             <StyledSpan>Developer</StyledSpan>
                         </StyledTitle>

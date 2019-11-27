@@ -63,7 +63,7 @@ const Intro = () => {
         <StyledContainer>
             <StyledGrid container>
                 <StyledGridItem item xs={12} md={6}>
-                    <StyledTitle>hello, i'm Chris.</StyledTitle>
+                    <StyledTitle>Hello, I'm Chris.</StyledTitle>
                     <StyledText>
                         I'm a software developer and I focus on writing readable and clean code that is easy to customize and maintain.
                     </StyledText>

@@ -33,6 +33,10 @@ const StyledP = styled.p`
 
 const StyledLink = styled.a`
   color: ${colors.secondaryText};
+  transition: 0.6s ease;
+  &:hover{
+    color: ${colors.secondaryBG};
+  }
 `
 
 

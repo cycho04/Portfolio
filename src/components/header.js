@@ -31,6 +31,12 @@ const StyledIcon = styled(FontAwesomeIcon)`
   @media ${device.tablet}{
     display: none;
   }
+  transition: 1s ease;
+
+  &:hover{
+    color: ${colors.secondaryBG};
+  }
+  cursor: pointer;
 `
 
 const StyledHidden = styled.div`
@@ -42,6 +48,11 @@ const StyledLinks = styled.a`
   text-decoration: none;
   padding-left: 8%;
   display: none;
+  transition: 1s ease;
+
+  &:hover{
+    color: ${colors.secondaryBG};
+  }
 
   ${props => props.hidden && css`
     display: block;

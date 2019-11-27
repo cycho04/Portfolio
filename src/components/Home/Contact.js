@@ -38,6 +38,11 @@ const StyledButton = styled.button`
     :focus{
         outline: none;
     }
+    transition: 0.6s ease;
+    &:hover{
+        background-color: ${colors.secondaryBG};
+        color: black;
+    }
 `
 
 //element is hidden, used for copy to clipboard

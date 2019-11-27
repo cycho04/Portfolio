@@ -68,29 +68,39 @@ const StyledCard = styled(Card)`
     color: ${colors.secondaryText};
 `
 
+const StyledLink = styled.a`
+    color: white;
+    text-decoration: none !important;
+    transition: 1s ease;
+    &:hover{
+        color: ${colors.secondaryBG};
+    }
+`
+
+
 const Work = () => {
 
     const projects = [
-        {title: 'LaMar Software', url: 'https://cocky-pare-e0db29.netlify.com/', image: project1, subheader: 'Gatsby.JS / GraphQL / Material UI'},
-        {title: 'YouTube Copy', url: 'https://hue-tube.herokuapp.com/', image: project2, subheader: 'React.JS / Axios.JS / REST API'},
-        {title: 'Learn to Play Baccarat', url: 'https://ez-baccarat.herokuapp.com/', image: project3, subheader: 'React.JS / Node.JS / MongoDB'},
+        {title: 'LaMar Software Business App', url: 'https://cocky-pare-e0db29.netlify.com/', image: project1, subheader: 'Gatsby / GraphQL / Material UI'},
+        {title: 'HueTube - Augmented YouTube', url: 'https://hue-tube.herokuapp.com/', image: project2, subheader: 'React / Axios / REST API'},
+        {title: 'EZ Baccarat Tutorial', url: 'https://ez-baccarat.herokuapp.com/', image: project3, subheader: 'React / Node / Express / MongoDB'},
     ]
 
     const renderedProjects = projects.map((project, index)=> {
         return(
             <StyledGridItem key={index} item xs={12} sm={6} md={4}>
                 <StyledCard>
-                    <a target='_blank' rel="noopener noreferrer" href={project.url}>
+                    <StyledLink target='_blank' rel="noopener noreferrer" href={project.url}>
                         <StyledCardMedia 
                             title={project.title}
                             image={project.image}
                         />    
-                    </a>
-                    <CardHeader 
-                        title={project.title}
-                        subheader={project.subheader}
-                        subheaderTypographyProps={{'color': "initial"}}
-                    />
+                        <CardHeader 
+                            title={project.title}
+                            subheader={project.subheader}
+                            subheaderTypographyProps={{'color': "initial"}}
+                        />
+                    </StyledLink>
                 </StyledCard>
             </StyledGridItem>
         )
@@ -100,7 +110,7 @@ const Work = () => {
     return(
         <StyledMain id='work'>
             <StyledContainer>
-                <StyledTitle>MY WORK</StyledTitle> 
+                <StyledTitle>PROJECTS</StyledTitle> 
                 <StyledGrid container>
                     {renderedProjects}
                 </StyledGrid>  
