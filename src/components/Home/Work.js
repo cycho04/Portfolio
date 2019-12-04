@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import project1 from '../../images/software.jpg';
 import project2 from '../../images/youtube.jpg';
 import project3 from '../../images/casino.jpg';
+import project4 from '../../images/30stills.jpg';
 import {device} from '../../styles/media';
 import colors from '../../styles/colors';
 
@@ -84,6 +85,7 @@ const Work = () => {
         {title: 'LaMar Software Business App', url: 'https://cocky-pare-e0db29.netlify.com/', image: project1, subheader: 'Gatsby / GraphQL / Material UI'},
         {title: 'HueTube - Augmented YouTube', url: 'https://hue-tube.herokuapp.com/', image: project2, subheader: 'React / Axios / REST API'},
         {title: 'EZ Baccarat Tutorial', url: 'https://ez-baccarat.herokuapp.com/', image: project3, subheader: 'React / Node / Express / MongoDB'},
+        {title: '30 Stills', url: 'https://laughing-brown-61dd44.netlify.com', image: project4, subheader: 'HTML / CSS / React / REST API'},
     ]
 
     const renderedProjects = projects.map((project, index)=> {
