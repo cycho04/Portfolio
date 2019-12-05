@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
+
 import project1 from '../../images/software.jpg';
 import project2 from '../../images/youtube.jpg';
 import project3 from '../../images/casino.jpg';
@@ -38,10 +39,6 @@ const StyledTitle = styled.h2`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-`
-
-const StyledGrid = styled(Grid)`
-
 `
 
 const StyledGridItem = styled(Grid)`
@@ -113,9 +110,9 @@ const Work = () => {
         <StyledMain id='work'>
             <StyledContainer>
                 <StyledTitle>PROJECTS</StyledTitle> 
-                <StyledGrid container>
+                <Grid container>
                     {renderedProjects}
-                </StyledGrid>  
+                </Grid>  
             </StyledContainer>    
         </StyledMain>
     )

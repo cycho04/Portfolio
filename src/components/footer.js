@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 import colors from '../styles/colors';
 import Container from '@material-ui/core/Container';
 
@@ -40,11 +40,11 @@ const StyledLink = styled.a`
 `
 
 
-const Footer = ({ author }) => (
+const Footer = () => (
   <footer>
     <StyledFooter>
       <StyledTextBox>
-        <StyledP>© 2019 {author}</StyledP>
+        <StyledP>© 2019</StyledP>
         <StyledP>Built with a mobile first approach</StyledP>
       </StyledTextBox>
       <StyledIconBox>
@@ -56,13 +56,5 @@ const Footer = ({ author }) => (
     </StyledFooter>
   </footer>
 )
-
-Footer.propTypes = {
-  author: PropTypes.string,
-}
-
-Footer.defaultProps = {
-  author: ``,
-}
 
 export default Footer;

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+
 import {device} from '../../styles/media';
 import colors from '../../styles/colors';
-import Grid from '@material-ui/core/Grid';
 import mic from '../../images/goldenmic.png';
 
 const StyledContainer = styled(Container)`
@@ -45,13 +46,6 @@ const StyledText = styled.p`
     line-height: 1.8rem;
 `
 
-const StyledGrid = styled(Grid)`
-
-`
-
-const StyledGridItem = styled(Grid)`
-
-`
 const StyledImg = styled.img`
     height: auto;
     max-height: 500px;
@@ -61,17 +55,17 @@ const StyledImg = styled.img`
 const Intro = () => {
     return(
         <StyledContainer>
-            <StyledGrid container>
-                <StyledGridItem item xs={12} md={6}>
+            <Grid container>
+                <Grid item xs={12} md={6}>
                     <StyledTitle>Hello, I'm Chris.</StyledTitle>
                     <StyledText>
                         I'm a software developer and I focus on writing readable and clean code that is easy to customize and maintain.
                     </StyledText>
-                </StyledGridItem>
-                <StyledGridItem item xs={12} md={6}>
+                </Grid>
+                <Grid item xs={12} md={6}>
                     <StyledImg src={mic}/>
-                </StyledGridItem>
-            </StyledGrid>
+                </Grid>
+            </Grid>
         </StyledContainer>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+
 import {device} from '../../styles/media';
 import colors from '../../styles/colors';
 import coffee from '../../images/coffee.png';
@@ -88,4 +89,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default About

@@ -2,12 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Container from '@material-ui/core/Container';
 import Snackbar from '@material-ui/core/Snackbar';
+
 import colors from '../../styles/colors';
 
-
-const StyledMain = styled.div`
-    
-`
 
 const StyledContainer = styled(Container)`
     height: auto;
@@ -77,7 +74,7 @@ class Contact extends React.Component {
     //A default onChange is needed on StyledInput
     render(){
         return(
-            <StyledMain id='contact'>
+            <div id='contact'>
                 <StyledContainer>
                     <StyledTitle>Get in Touch</StyledTitle>
                     <StyledInput onChange={() => true} type="text" value="chrisycho04@gmail.com" id='email'/>
@@ -95,9 +92,9 @@ class Contact extends React.Component {
                         message={<span>Copied to Clipboard</span>}
                     />
                 </StyledContainer>    
-            </StyledMain>  
+            </div>  
         )
     }
 }
 
-export default Contact;
+export default Contact

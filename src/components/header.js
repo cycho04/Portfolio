@@ -1,12 +1,12 @@
-import PropTypes from "prop-types"
 import React from "react"
-import styled, {css} from 'styled-components';
-import Container from '@material-ui/core/Container';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBolt} from '@fortawesome/free-solid-svg-icons';
-import Drawer from '@material-ui/core/Drawer';
-import colors from '../styles/colors';
-import {device} from '../styles/media';
+import styled, {css} from 'styled-components'
+import Container from '@material-ui/core/Container'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBolt} from '@fortawesome/free-solid-svg-icons'
+import Drawer from '@material-ui/core/Drawer'
+
+import colors from '../styles/colors'
+import {device} from '../styles/media'
 
 
 const StyledHeader = styled(Container)`
@@ -109,14 +109,6 @@ const Header = () => {
       </StyledHeader>  
     </header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
